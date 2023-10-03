@@ -17,7 +17,7 @@ public class EmailSenderService {
 		javax.mail.internet.MimeMessage mimeMessage = mailsender.createMimeMessage();
         MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
 //		SimpleMailMessage message=new SimpleMailMessage();
-		message.setFrom("shubhkaryaaevents.off@gmail.com");
+		message.setFrom("rahul95272180@gmail.com");
 		message.setTo(toEmail);
 		message.setText(body,true);
 		message.setSubject(subject);

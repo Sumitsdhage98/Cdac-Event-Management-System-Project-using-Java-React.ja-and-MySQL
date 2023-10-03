@@ -7,11 +7,33 @@ import { Link, useHistory } from "react-router-dom";
 import { url } from "../common/constants";
 
 const EmployeeLogin = () => {
+
+
+
+
+
+
   const history = useHistory();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [error, seterror] = useState("");
   const [errortype, seterrortype] = useState("");
+
+  if( localStorage.getItem('jwttoken') && localStorage.getItem('role')==="ADMIN"){
+    history.push("/admin/welcome")
+  }else if( localStorage.getItem('jwttoken') && localStorage.getItem('role')==="MANAGER"){
+    history.push("/manager/welcome")
+  }else if( localStorage.getItem('jwttoken') && localStorage.getItem('role')==="EMPLOYEE"){
+    history.push("/employee/welcome")
+  }else if(localStorage.getItem('jwttoken') && localStorage.getItem('role')==="CUSTOMER" ) {
+    history.push("/customer/welcome");
+  }
+   
+  
+
+ 
+
+
   const Login = (e) => {
     e.preventDefault();
     const employee = { email, password };

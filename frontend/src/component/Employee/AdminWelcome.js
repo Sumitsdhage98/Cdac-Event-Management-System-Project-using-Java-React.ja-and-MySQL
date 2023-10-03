@@ -8,11 +8,14 @@ import { FaEdit } from "react-icons/fa";
 import { MdEditCalendar, MdOutlinePreview } from "react-icons/md";
 
 const AdminWelcome = () => {
+
+
+  
   const state = [
     {
       id: 1,
       icon: <MdEditCalendar className="commonIcons2" />,
-      heading: "View & Register Employees,Managers & Admins",
+      heading: "View & Register Emp,Mgr & Admins",
       link: "viewemployees"
     },
     {
